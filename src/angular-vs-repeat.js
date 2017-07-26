@@ -590,8 +590,8 @@
                                 var o2 = parsed($scope, {$index: $scope[collectionName].length});
                                 var total = $scope.totalSize;
 
-                                $beforeContent.css(getLayoutProp(), o1 + 'px');
-                                $afterContent.css(getLayoutProp(), (total - o2) + 'px');
+                                $beforeContent.css(getLayoutProp(), (o1 > 0 ? o1 : "0") + 'px');
+                                $afterContent.css(getLayoutProp(), ((total - o2) > 0 ? (total - o2) : "0") + 'px');
                             }
 
                             return digestRequired;
